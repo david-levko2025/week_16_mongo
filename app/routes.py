@@ -1,5 +1,8 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, UploadFile, File
 import dal
+from fastapi.encoders import jsonable_encoder
+
+
 
 router = APIRouter(prefix="/employees",tags=["Employees"])
 
@@ -29,5 +32,6 @@ def get_employees_by_lastname_and_age():
     return dal.get_employees_by_lastname_and_age()
 
 @router.post("/uploadfile")
-def upload_file():
-    pass
+def create_upload_file(file: UploadFile = File(...)):
+    json_data = jsonable_encoder(file)
+    return dal.uplaod_file(json_data)

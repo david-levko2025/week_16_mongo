@@ -52,4 +52,4 @@ def get_employees_by_lastname_and_age():
 
 def uplaod_file(file_data):
     ins_result = collection.insert_many(file_data)
-    return {f"hi{ins_result.inserted_ids}"}
+    return {f"data insert to mongo, ObjectId:{ins_result.inserted_ids}"}
