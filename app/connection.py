@@ -9,7 +9,7 @@ file_path = './employee.json'
 
 def get_connection():
     myclient = MongoClient(mongo_uri)
-    db = myclient["fastapi"]
+    db = myclient["contacts_data"]
     Collection = db["employee"]
     return Collection
 collection = get_connection()

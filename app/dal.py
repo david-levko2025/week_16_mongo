@@ -47,4 +47,3 @@ def get_employees_by_lastname_and_age():
         ,'age':1, 'job_role.department': 1}
     )
     return list(query)
-print(get_employees_by_age_and_role())
