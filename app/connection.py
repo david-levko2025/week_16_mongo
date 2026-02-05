@@ -15,7 +15,7 @@ def get_connection():
 collection = get_connection()
 
 
-mongo_uri = getenv("MONGO_URI", "mongodb+srv://mdavidl2003:mdavidl2003@cluster0.1n6f8x2.mongodb.net/")
+# mongo_uri = getenv("MONGO_URI", "mongodb+srv://mdavidl2003:mdavidl2003@cluster0.1n6f8x2.mongodb.net/")
 
 # Loading or Opening the json file
 # with open(file_path) as file:
