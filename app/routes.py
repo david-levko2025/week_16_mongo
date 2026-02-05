@@ -27,3 +27,7 @@ def get_managers_excluding_departments():
 @router.get("/by-lastname-and-age")
 def get_employees_by_lastname_and_age():
     return dal.get_employees_by_lastname_and_age()
+
+@router.post("/uploadfile")
+def upload_file():
+    pass
